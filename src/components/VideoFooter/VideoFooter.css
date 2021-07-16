@@ -1,0 +1,54 @@
+.videoFooter {
+  /* position: relative; -> means all the rouls apply with in Parent container */
+  position: relative;
+  color: #ffff;
+  bottom: 150px; /*  from bottom 50px up*/
+  margin-left: 25px;
+  display: flex;
+}
+.videoFooter__text {
+  flex: 1;
+}
+
+.videoFooter__text > p {
+  padding-bottom: 20px;
+}
+.videoFooter__text > h3 {
+  padding-bottom: 20px;
+}
+
+.videoFooter__ticker h1 {
+  /* padding-top: 7px; */
+}
+
+.videoFooter__record {
+  /* 3s-> 0deg to 360deg take 3 second to complate */
+  animation: spinTheRecord infinite 3s linear;
+  height: 50px;
+
+  /*   invert for color, by default color is black */
+  filter: invert(1);
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+.videoFooter__icon {
+  position: absolute;
+}
+
+.videoFooter__ticker > .ticker {
+  height: fit-content;
+  margin-left: 30px;
+  width: 60%;
+}
+
+/* Css animation for disc spinning */
+@keyframes spinTheRecord {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
